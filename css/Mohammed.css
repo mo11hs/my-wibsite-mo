@@ -1,0 +1,602 @@
+/* Golubal rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --main-color: #007BFF;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: monospace;
+    background-color: #101010;
+    position: relative;
+    font-family: Gaph;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #D9D9D9;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* small screen */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* midume screen */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large screen */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+@font-face {
+    font-family: Gaph;
+    src: url(../Fonts/GraphikArabic-Bold.ttf);
+}
+
+@font-face {
+    font-family: GaphR;
+    src: url(/Fonts/GraphikArabic-Regular.ttf);
+}
+
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px 25px;
+    border-radius: 46px;
+    width: 175px;
+    height: 64px;
+}
+
+/* Golubal rules */
+
+/* start heaing-nav */
+.Header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;}
+
+.Header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    animation-name: down;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+.Header .container .logo a {
+    font-size: 30px;}
+
+.Header .container .nav ul li  {
+    display: inline-block;
+    margin: 3px;
+    gap: 10px;
+    font-size: 20px;}
+
+.Header .container .nav > ul > li > a {
+    font-size: 15px;
+    font-family: GaphR;;}
+
+.Header .container .nav {
+    margin-left: 10px;}
+
+.Header .container .buttom a {
+    font-size: 18px;
+    padding: 16.45px 35.70px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--main-color);
+    border-radius: 46px;
+    backdrop-filter: blur(10px);}
+
+
+    /*s responsive layout */
+    @media (max-width: 767px) {
+        .Header .container {
+            display: flex;
+        }
+        .Header .container .nav  {
+            display: none;
+        }
+        .Header .container .buttom a {
+            font-size: 15px;
+            padding: 10px 10px;
+        }
+    }
+    /*e responsive layout */
+
+    /* end heaing-nav */
+    
+    /*s Animation-nav */
+    @keyframes down {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+    }
+}
+/*e Animation-nav */
+
+
+/* start hero-section */
+.hero-section {
+    padding-top: 126px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+
+.hero-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-section .container .text h1, .hero-section h4, .hero-section p  {
+    color: white
+}
+.hero-section .container .text {
+
+    animation-name: text-down;
+    animation-duration: 2s;
+}
+.hero-section .container .text h1 {
+    font-size: 64px;
+}
+.hero-section .container .text h1 span {
+    color: var(--main-color);
+}
+.hero-section .container .text h4, .hero-section .text > p {
+    font-size: 22px;
+    font-family: GaphR;
+}
+
+.hero-section .container .text p {
+    font-size: 22px;
+    margin-top: 31px;
+}
+
+.hero-section .container .text .button {
+    font-size: 18px;
+    margin-top: 32px;
+    transition: 0.3s;
+}
+
+
+.hero-section .container .text .button:hover {
+    background-color: #006cdf;
+}
+
+.hero-section .container .image  {
+    animation-name: op;
+    animation-duration: 2.5s;
+}
+.hero-section .container .image img {
+    border-radius: 50%;
+}
+
+/*s animation hero section */
+@keyframes text-down {
+    from{
+        opacity: 0;
+        transform: translateY(15%);
+}
+    to {
+        opacity: 1;
+    }
+}
+@keyframes op {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/*e animation hero section */
+
+/*s hero-section Responsive */
+@media (max-width: 1200px) {
+    .hero-section .container .image {
+        display: none;
+    }
+    .hero-section .container {
+        justify-content: center;
+    }
+    .hero-section .container .text h1 {
+        justify-content: center;
+    } 
+    .hero-section .container .button {
+        margin: 31px auto;
+    }
+}
+@media (max-width: 991px) {
+    .hero-section .container .image {
+        display: none;
+    }
+    .hero-section .container  {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section .image {
+        display: none;
+    }
+    .hero-section .container .text {
+        align-items: center;
+    }
+    .hero-section .container .text  h1 {
+        font-size: 60px;
+    }
+    .hero-section .container .text p {
+        font-size: 18px;
+    }
+    .hero-section .container .button {
+        margin: 31px auto;
+    }
+}
+
+ @media (max-width: 588px)  {
+
+    .hero-section .container .text  h1 {
+        font-size: 42px;
+    }
+    .hero-section .container .text p {
+        font-size: 13px;
+    }
+    .Header .container .buttom {
+        display: none;
+    }
+    .Header .container .logo  {
+        margin: auto;
+    }
+ } 
+ @media (max-width: 408px)  {
+    
+    .hero-section .container .text  h1 {
+        font-size: 26px;
+    }
+    .hero-section .container .text p {
+        font-size: 13px;
+    }
+    .Header .container .buttom {
+        display: none;
+    }
+    .Header .container .logo  {
+        margin: auto;
+    }
+ } 
+
+/*e hero-section Responsive */
+
+/* end hero-section */
+
+/* Start About-me */
+.about-me  {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    position: relative;
+}
+
+.about-me .container .text {
+    animation-name: go-up;
+    animation-duration: 1s;
+    animation-timeline: view();
+    -o-animation-timeline: view();
+    -moz-animation-timeline: view();
+    -ms-animation-timeline: view();
+}
+@keyframes go-up {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+}
+to {
+    opacity: 1;
+}
+}
+
+.about-me .container .text h2  {
+    color: white;
+    font-size: 56px;
+    font-family: GaphR;
+}
+
+.about-me .container .text h2 span {
+    color: var(--main-color);
+    font-family: Gaph;
+}
+
+.about-me .container .text p {
+    margin-top: 36px;
+    color: white;
+    font-size: 20px;
+    font-family:GaphR;
+}
+
+@media (max-width: 767px) {
+    .about-me .container .text p {
+        font-size: 10px;
+        align-items: center;
+    }
+    .about-me .container .text {
+        margin: auto;
+    }
+
+}
+@media (max-width: 992px) {
+    .about-me .container .text p {
+        font-size: 15px;
+        align-items: center;
+    }
+    .about-me .container .text  {
+        margin: auto;
+    }
+}
+
+
+/* End About-me */
+
+
+
+/* start About me part two */
+.about-me-part-two {
+    padding-top: 113px;
+    padding-top: 113px;
+    position: relative;
+    animation-name: go-up;
+    animation-duration: 2s;
+    animation-timeline: view();
+}
+.about-me-part-two .container .text h3 {
+    font-size: 48px;
+    font-family: GaphR;
+    color: white;
+
+}
+
+
+.about-me-part-two .container .text h3 span {
+    font-family: Gaph;
+    color: var(--main-color);
+}
+
+
+
+/* start test new Animation */
+
+.about-me-part-two .container .icons {
+    width: 100%;
+
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, #000, transparent);
+}
+.about-me-part-two .container .icons .list {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.about-me-part-two .container .icons .list .items {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    -webkit-animation: autoRun 10s linear infinite;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1)  );
+}
+.about-me-part-two .container .icons .list .items img {
+    width: 100%;
+
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%
+    }
+    to {
+        left: calc(var(--width) * -1);
+    }
+}
+/* End test new Animation */
+
+
+/* end About me part two */
+
+
+/* start projacts */
+.projects {
+    padding-top: 250px ;
+    padding-bottom: 150px;
+    position: relative;
+}
+
+
+
+.main-title {
+    color: var(--main-color);
+    font-size: 48px;
+    display: flex ;
+    justify-content: center;
+    margin-bottom: 39px;
+}
+
+.projects .container  {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.projects .container .card-one,
+.projects .container .card-two,
+.projects .container .card-three  {
+    font-family: GaphR;
+    color: aliceblue;
+    padding: 50px;
+    height: 437px;
+    border: 2px solid var(--main-color);
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #9c1a1a00 10px, #006fe63a);
+    transition: 0.6s;
+}
+.projects .container .card-one:hover,
+.projects .container .card-two:hover,
+.projects .container .card-three:hover  {
+    transform: translateY(-16px);
+    box-shadow: 0 1px 20px #006fe680;
+}
+.projects .container .card-one h4,
+.projects .container .card-two h4,
+.projects .container .card-three h4 {
+    font-size: 32px;
+    font-family: GaphR;
+}
+
+
+.projects .container .card-one p,
+.projects .container .card-two p,
+.projects .container .card-three p {
+    font-size: 25px;
+}
+
+.projects .container span {
+    color: var(--main-color);
+}
+
+.projects .container .card-one ol li,
+.projects .container .card-two ol li,
+.projects .container .card-three ol li {
+    font-size: 25px;
+    font-family: GaphR;
+}
+
+
+
+@media (max-width: 997px) {
+    .projects .container {
+        display: grid;
+    }
+    .projects .container .card-one h4,
+    .projects .container .card-two h4,
+    .projects .container .card-three h4 {
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    .projects .container .card-one p,
+    .projects .container .card-two p,
+    .projects .container .card-three p {
+        display: flex;
+    
+        justify-content: center;
+    }
+    .projects .container .card-one ul li,
+    .projects .container .card-two ul li,
+    .projects .container .card-three ul li {
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+
+
+@media (max-width: 767px) {
+    .projects .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .projects .container .card-one,
+    .projects .container .card-two {
+        margin-bottom: 20px;
+    }
+    .projects .container .card-one h4,
+    .projects .container .card-two h4,
+    .projects .container .card-three h4 {
+        font-size: 60px;
+        display: flex;
+        justify-content: center;
+    }
+    .projects .container .card-one p,
+    .projects .container .card-two p,
+    .projects .container .card-three p {
+        display: flex;
+    
+        justify-content: center;
+    }
+    .projects .container .card-one ul li,
+    .projects .container .card-two ul li,
+    .projects .container .card-three ul li {
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+@media (max-width: 435px) {
+    .projects .container .card-one h4,
+    .projects .container .card-two h4,
+    .projects .container .card-three h4 {
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    .projects .container .card-one p,
+    .projects .container .card-two p,
+    .projects .container .card-three p {
+        display: flex;
+    
+        justify-content: center;
+    }
+    .projects .container .card-one ul li,
+    .projects .container .card-two ul li,
+    .projects .container .card-three ul li {
+        display: flex;
+        justify-content: center;
+        
+    }
+}
+/* end projacts */
+
