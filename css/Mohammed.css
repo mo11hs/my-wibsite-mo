@@ -113,7 +113,8 @@ a {
     font-family: GaphR;;}
 
 .Header .container .nav {
-    margin-left: 10px;}
+    margin-left: 10px;
+}
 
 .Header .container .buttom a {
     font-size: 18px;
@@ -160,8 +161,24 @@ a {
     padding-bottom: 20px;
     position: relative;
 }
-
-
+.hero-section::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 254px;
+    top: 192px;
+    background: #004A99;
+    filter: blur(105.5px);
+    z-index: -100;
+    transition: 0.3s;
+}
+@media (max-width: 520px) {
+    .hero-section::before {
+        left: 104px;
+        top: 192px;
+    }
+}
 .hero-section .container {
     display: flex;
     flex-wrap: wrap;
@@ -172,19 +189,24 @@ a {
 .hero-section .container .text h1, .hero-section h4, .hero-section p  {
     color: white
 }
-.hero-section .container .text {
 
+.hero-section .container .text {
     animation-name: text-down;
     animation-duration: 2s;
 }
+
 .hero-section .container .text h1 {
     font-size: 64px;
+    transition: 0.3s;
 }
+
 .hero-section .container .text h1 span {
     color: var(--main-color);
 }
+
 .hero-section .container .text h4, .hero-section .text > p {
     font-size: 22px;
+    transition: 0.3s;
     font-family: GaphR;
 }
 
@@ -206,6 +228,7 @@ a {
 
 .hero-section .container .image  {
     animation-name: op;
+    transition: 0.3s;
     animation-duration: 2.5s;
 }
 .hero-section .container .image img {
@@ -240,9 +263,9 @@ a {
     .hero-section .container {
         justify-content: center;
     }
-    .hero-section .container .text h1 {
-        justify-content: center;
-    } 
+    .hero-section .container .text {
+        text-align: center;
+    }
     .hero-section .container .button {
         margin: 31px auto;
     }
@@ -261,14 +284,13 @@ a {
     .hero-section .image {
         display: none;
     }
-    .hero-section .container .text {
-        align-items: center;
-    }
     .hero-section .container .text  h1 {
         font-size: 60px;
+        text-align: center;
     }
     .hero-section .container .text p {
         font-size: 18px;
+        text-align: center;
     }
     .hero-section .container .button {
         margin: 31px auto;
@@ -282,6 +304,7 @@ a {
     }
     .hero-section .container .text p {
         font-size: 13px;
+        
     }
     .Header .container .buttom {
         display: none;
@@ -290,13 +313,14 @@ a {
         margin: auto;
     }
  } 
- @media (max-width: 408px)  {
+ @media (max-width: 428px)  {
     
     .hero-section .container .text  h1 {
         font-size: 26px;
     }
     .hero-section .container .text p {
         font-size: 13px;
+        text-align: center;
     }
     .Header .container .buttom {
         display: none;
@@ -314,7 +338,19 @@ a {
 .about-me  {
     padding-top: 140px;
     padding-bottom: 140px;
-    position: relative;
+    margin-bottom: 100px;
+    position: relative;}
+.about-me::before{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 148px;
+    left: 104px;
+    top: 204px;
+    background: #004A99;
+    filter: blur(80.5px);
+    z-index: -100;
+    border-radius: 50%;
 }
 
 .about-me .container .text {
@@ -325,6 +361,7 @@ a {
     -moz-animation-timeline: view();
     -ms-animation-timeline: view();
 }
+
 @keyframes go-up {
     from {
         opacity: 0;
@@ -360,24 +397,20 @@ to {
 @media (max-width: 767px) {
     .about-me .container .text p {
         font-size: 10px;
-        align-items: center;
+        text-align: center;
     }
-    .about-me .container .text {
-        margin: auto;
-    }
-
 }
 @media (max-width: 992px) {
     .about-me .container .text p {
         font-size: 15px;
         align-items: center;
-    }
-    .about-me .container .text  {
-        margin: auto;
-    }
-}
+    }}
 
-
+    @media (max-width: 1200px) {
+        .about-me .container .text p {
+            
+        }
+    }
 /* End About-me */
 
 
@@ -385,7 +418,7 @@ to {
 /* start About me part two */
 .about-me-part-two {
     padding-top: 113px;
-    padding-top: 113px;
+    padding-bottom: 113px;
     position: relative;
     animation-name: go-up;
     animation-duration: 2s;
@@ -395,9 +428,20 @@ to {
     font-size: 48px;
     font-family: GaphR;
     color: white;
-
 }
 
+.about-me-part-two::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 204px;
+    top: 104px;
+    background: #016fe5;
+    filter: blur(80.5px);
+    z-index: -100;
+    border-radius: 50%;
+}
 
 .about-me-part-two .container .text h3 span {
     font-family: Gaph;
@@ -454,9 +498,27 @@ to {
     padding-top: 250px ;
     padding-bottom: 150px;
     position: relative;
+    overflow-x: hidden;
 }
 
+.projects .main-title {
+    animation: go-do 1s linear;
+    -webkit-animation: go-do 1s linear;
+    animation-timeline: view();
+}
 
+.projects::before{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 148px;
+    left: 154px;
+    top: 204px;
+    background: #004A99;
+    filter: blur(80.5px);
+    z-index: -100;
+    border-radius: 50%;
+}
 
 .main-title {
     color: var(--main-color);
@@ -472,6 +534,8 @@ to {
     grid-template-columns: repeat(3, 1fr);
 }
 
+
+
 .projects .container .card-one,
 .projects .container .card-two,
 .projects .container .card-three  {
@@ -483,6 +547,7 @@ to {
     border-radius: 30px;
     background-image: linear-gradient(to right, #9c1a1a00 10px, #006fe63a);
     transition: 0.6s;
+    overflow: hidden;
 }
 .projects .container .card-one:hover,
 .projects .container .card-two:hover,
@@ -520,6 +585,7 @@ to {
 @media (max-width: 997px) {
     .projects .container {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
     .projects .container .card-one h4,
     .projects .container .card-two h4,
@@ -598,5 +664,113 @@ to {
         
     }
 }
+
+
+
+/* start animation: projects */
+@keyframes view-biger {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes  go-do  {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -o-transform: translateY(-20px);
+}
+}
+/* end animation: projects */
+
 /* end projacts */
 
+
+/* start Want contact cta */
+.want-contact {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: relative;
+    animation: go-when-view 2s linear;
+    -webkit-animation: go-when-view 2s linear;
+    animation-timeline: view();
+    -webkit-animation-timeline: view();
+}
+
+
+.want-contact .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.want-contact .container .card {
+    background-image: linear-gradient(to bottom, #007bff4b 10%, transparent);
+    padding: 100px;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.want-contact .container .card .main-title {
+    color: #ffffff;
+    font-size: 32px;
+    font-family: GaphR;
+}
+
+.want-contact .container .card .button {
+    margin: auto;
+}
+
+@media (max-width: 767px) {
+    .want-contact .container .card .main-title {
+        font-size: 20px;
+    }
+}
+@media (max-width: 411px) {
+    .want-contact .container .card .main-title {
+        font-size: 20px;
+    }
+    .want-contact .container .card .button {
+        width: 131px;
+        height: 35px;
+    }
+    .want-contact .container .card .button a {
+        font-size: 13px;
+    }
+}
+
+
+@keyframes go-when-view {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+}
+to {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);}}
+/* end Want contact cta */
+
+
+/* start footer */
+.footer {
+    padding-top: 200px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #006cdf;
+}
+
+.footer p {
+    margin: 10px;
+}
+/* end footer */
